@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="css/carousel.css" rel="stylesheet">
+    <title>Project-B</title>
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+  
+        .b-example-divider {
+          width: 100%;
+          height: 3rem;
+          background-color: rgba(0, 0, 0, .1);
+          border: solid rgba(0, 0, 0, .15);
+          border-width: 1px 0;
+          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+  
+        .b-example-vr {
+          flex-shrink: 0;
+          width: 1.5rem;
+          height: 100vh;
+        }
+  
+        .bi {
+          vertical-align: -.125em;
+          fill: currentColor;
+        }
+  
+        .nav-scroller {
+          position: relative;
+          z-index: 2;
+          height: 2.75rem;
+          overflow-y: hidden;
+        }
+  
+        .nav-scroller .nav {
+          display: flex;
+          flex-wrap: nowrap;
+          padding-bottom: 1rem;
+          margin-top: -1px;
+          overflow-x: auto;
+          text-align: center;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+        }
+  
+        .btn-bd-primary {
+          --bd-violet-bg: #712cf9;
+          --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  
+          --bs-btn-font-weight: 600;
+          --bs-btn-color: var(--bs-white);
+          --bs-btn-bg: var(--bd-violet-bg);
+          --bs-btn-border-color: var(--bd-violet-bg);
+          --bs-btn-hover-color: var(--bs-white);
+          --bs-btn-hover-bg: #6528e0;
+          --bs-btn-hover-border-color: #6528e0;
+          --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+          --bs-btn-active-color: var(--bs-btn-hover-color);
+          --bs-btn-active-bg: #5a23c8;
+          --bs-btn-active-border-color: #5a23c8;
+        }
+  
+        .bd-mode-toggle {
+          z-index: 1500;
+        }
+  
+        .bd-mode-toggle .dropdown-menu .active .bi {
+          display: block !important;
+        }
+        img{
+            object-fit: fill;
+        }
+        .card-img {
+          width: 100%;
+          height: 200px; /* Atur sesuai kabutuhan*/
+          object-fit: cover;
+        }
+        .overlay-dark::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          z-index: 1;
+        }
+      </style>
+</head>
+<body>
+     <header data-bs-theme="dark">
+         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">LPMI BDS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galery.html">Galery</a>
+                      </li>
+                  </ul>
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+            </div>
+         </nav>
+    </header>
+    <main class="container">
+        <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+          <div class="col-lg-6 px-0">
+            <h1 class="display-4 fst-italic">Lembaga Pendidikan Mental Indonesia</h1>
+            <p class="lead my-3">Yang sudah mendapat lisensi dari negara, dan juga telah terpercaya di berbagai lembaga pendidikan sebagai lembaga pendidikan mental yang berkualitas dan juga profesional</p>
+            <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+          </div>
+        </div>
+      
+        <div class="row mb-2">
+          <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary-emphasis">Pengetahuan</strong>
+                <h3 class="mb-0">LPMI BDS</h3>
+                <div class="mb-1 text-body-secondary">Oct 03</div>
+                <p class="card-text mb-auto">Ingin mengetahui beberapa gejala psikologi? </p>
+                <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                  Continue reading
+                  <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+                </a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-success-emphasis">Lainnya</strong>
+                <h3 class="mb-0">LPMI BDS</h3>
+                <div class="mb-1 text-body-secondary">Oct 03</div>
+                <p class="mb-auto">Info lainnya.</p>
+                <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                  Continue reading
+                  <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+                </a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row g-5">
+          <div class="col-md-8">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+              From the Firehose
+            </h3>
+      
+            <article class="blog-post">
+              <h2 class="display-5 link-body-emphasis mb-1">Penyakit dan Gejala Psikologi: Pemahaman, Penyebab, dan Dampaknya</h2>
+              <p class="blog-post-meta">October 3, 2024 by <a href="#">Yaleen</a></p>
+      
+              <p>Penyakit psikologis atau gangguan mental adalah kondisi yang memengaruhi pikiran, emosi, dan perilaku seseorang. Gangguan ini dapat berdampak signifikan pada kehidupan sehari-hari, relasi sosial, dan kemampuan untuk berfungsi secara produktif. Penyakit mental tidak hanya menyerang pikiran, tetapi juga dapat memengaruhi kesehatan fisik dan kesejahteraan umum seseorang.</p>
+              <hr>
+              <p>Berikut ini adalah beberapa jenis penyakit psikologi yang umum ditemui beserta gejalanya:</p>
+              <h2>1. Depresi</h2>
+              <p>Depresi adalah gangguan suasana hati yang ditandai dengan perasaan sedih yang mendalam, kehilangan minat pada aktivitas yang biasa dinikmati, dan perasaan putus asa yang berlangsung lama. Depresi sering kali diabaikan karena gejalanya bisa bervariasi dan tidak selalu tampak secara fisik.</p>
+              <p>Gejala Depresi:</p>
+              <ul>
+                <li>Perasaan sedih atau hampa sepanjang waktu.</li>
+                <li>Kehilangan minat atau kesenangan dalam aktivitas sehari-hari.</li>
+                <li>Mudah lelah dan kurang energi.</li>
+                <li>Kesulitan tidur atau tidur berlebihan.</li>
+                <li>Perubahan nafsu makan dan berat badan.</li>
+                <li>Merasa tidak berharga atau bersalah berlebihan.</li>
+                <li>Pikiran tentang kematian atau bunuh diri.</li>
+              </ul>
+              <h2>2. Gangguan Kecemasan (Anxiety Disorders)</h2>
+              <p>Gangguan kecemasan melibatkan rasa takut atau khawatir berlebihan yang dapat mengganggu aktivitas sehari-hari. Kecemasan yang intens dan kronis dapat menyebabkan stres psikologis yang serius serta masalah fisik seperti sakit kepala, detak jantung yang cepat, dan sesak napas.</p>
+              <h4>Gejala Gangguan Kecemasan:</h4>
+              <ul>
+                <li>Kekhawatiran atau ketakutan berlebihan yang sulit dikendalikan.</li>
+                <li>Serangan panik (palpitasi, berkeringat, sesak napas).</li>
+                <li>Gelisah, tidak bisa tenang.</li>
+                <li>Gelisah, tidak bisa tenang.</li>
+                <li>Kesulitan berkonsentrasi.</li>
+                <li>Kesulitan berkonsentrasi.</li>
+                <li>Gangguan tidur, seperti insomnia.</li>
+              </ul>
+              <h2>3. Skizofrenia</h2>
+              <p>Skizofrenia adalah gangguan mental kronis yang memengaruhi cara seseorang berpikir, merasakan, dan berperilaku. Individu dengan skizofrenia mungkin mengalami kesulitan membedakan antara kenyataan dan fantasi.</p>
+              <h4>Gejala Skizofrenia:</h4>
+              <ul>
+                <li>Halusinasi (mendengar atau melihat hal-hal yang tidak nyata).</li>
+                <li>Delusi (keyakinan salah yang dipegang teguh meskipun ada bukti yang bertentangan).</li>
+                <li>Pikiran kacau atau bicara yang tidak teratur.</li>
+                <li>Penarikan diri dari kehidupan sosial dan emosional.</li>
+                <li>Berkurangnya motivasi dan ekspresi emosional.</li>
+              </ul>
+              <h2>4. Gangguan Bipolar</h2>
+              <p>Gangguan bipolar adalah gangguan mood yang menyebabkan perubahan drastis dalam suasana hati, energi, dan tingkat aktivitas seseorang. Penderita bipolar mengalami fase manik (tingkat energi tinggi dan euforia) dan fase depresi (tingkat energi rendah dan perasaan putus asa).</p>
+              <h4>Gejala Gangguan Bipolar:</h4>
+              <ul>
+                <li>Fase Manik:
+                    <ul>
+                        <li>Euforia berlebihan atau mudah tersinggung.</li>
+                        <li>Aktivitas fisik yang meningkat dan kurang tidur.</li>
+                        <li>Ide-ide yang mengalir cepat (berpikir tidak teratur).</li>
+                        <li>Pengambilan risiko yang tidak biasa (berjudi, belanja besar-besaran).</li>
+                    </ul>
+                </li>
+                <li>Fase Depresi:
+                    <ul>
+                        <li>Perasaan sedih, putus asa.</li>
+                        <li>Kurang energi, kelelahan ekstrem.</li>
+                        <li>Sulit berkonsentrasi.</li>
+                        <li>Perubahan pola tidur dan nafsu makan.</li>
+                    </ul>
+                </li>
+              </ul>
+              <h2>5. Gangguan Stres Pasca-Trauma (Post-Traumatic Stress Disorder/PTSD)</h2>
+              <p>PTSD adalah gangguan yang muncul setelah seseorang mengalami atau menyaksikan peristiwa traumatis, seperti kekerasan fisik, kecelakaan, atau bencana alam. Penderita PTSD mungkin mengalami kilas balik atau mimpi buruk yang mengingatkan mereka pada peristiwa traumatis tersebut.</p>
+              <h4>Gejala PTSD:</h4>
+              <ul>
+                <li>Kilas balik peristiwa traumatis.Mimpi buruk yang berulang tentang peristiwa tersebut.</li>
+                <li>Mimpi buruk yang berulang tentang peristiwa tersebut.</li>
+                <li>Hindari situasi atau tempat yang mengingatkan pada trauma.</li>
+                <li>Perasaan tertekan atau mudah marah.</li>
+                <li>Insomnia atau kesulitan tidur.</li>
+              </ul>
+              <h2>6. Gangguan Makan (Eating Disorders)</h2>
+              <p>Gangguan makan mencakup perilaku yang berhubungan dengan makan yang tidak sehat dan merusak, sering kali terkait dengan citra tubuh yang buruk atau keinginan untuk mengontrol berat badan secara ekstrem.</p>
+              <h4>Gejala Gangguan Makan:</h4>
+              <ul>
+                <li><b>Anoreksia Nervosa:</b> Membatasi asupan makanan secara ekstrem, ketakutan intens terhadap kenaikan berat badan, dan distorsi citra tubuh.</li>
+                <li><b>Bulimia Nervosa:</b> Pola makan berlebihan yang diikuti dengan upaya mengeluarkan makanan (misalnya muntah).</li>
+                <li><b>Binge Eating Disorder:</b> Makan berlebihan secara teratur disertai perasaan kehilangan kendali dan rasa bersalah.</li>
+              </ul>
+              <h2>Penyebab Penyakit Psikologi</h2>
+              <p>Penyakit psikologis dapat disebabkan oleh berbagai faktor, baik yang bersifat genetik, biologis, maupun lingkungan. Beberapa penyebab umum penyakit psikologis meliputi:</p>
+              <ul>
+                <li></li><b>Genetik:</b> Riwayat keluarga dengan gangguan mental dapat meningkatkan risiko seseorang.
+                <li></li><b>Ketidakseimbangan kimiawi di otak:</b> Neurotransmiter yang tidak seimbang dapat memengaruhi suasana hati dan perilaku.
+                <li></li><b>Pengalaman traumatis:</b> Penyalahgunaan, kekerasan, atau peristiwa traumatis lainnya.
+                <li></li><b>Faktor lingkungan:</b> Stres berkepanjangan, masalah dalam hubungan, atau beban pekerjaan.
+                <li></li><b>Kondisi kesehatan fisik:</b> Beberapa penyakit fisik atau penggunaan zat adiktif dapat memicu gangguan mental.
+              </ul>
+              <h2>Dampak Penyakit Psikologi</h2>
+              <p>Gangguan psikologis dapat berdampak besar pada kehidupan individu, baik dari segi kesehatan fisik maupun sosial. Penderita sering kali menghadapi tantangan dalam hubungan interpersonal, produktivitas kerja, dan kualitas hidup secara keseluruhan. Selain itu, stigma sosial terhadap penyakit mental dapat memperburuk keadaan, menghambat penderita untuk mencari bantuan profesional.</p>
+              <h2>Kesimpulan</h2>
+              <p>Penyakit psikologis adalah gangguan yang serius dan memerlukan perhatian serta perawatan yang tepat. Pengobatan yang umum meliputi terapi psikologis (seperti terapi kognitif-perilaku), obat-obatan (antidepresan, antipsikotik, dll.), serta dukungan dari keluarga dan teman-teman dekat. Dengan pemahaman yang lebih baik tentang gejala dan faktor penyebabnya, kita dapat membantu mendorong orang untuk mendapatkan diagnosis dan perawatan yang tepat serta mengurangi stigma terhadap gangguan mental.</p>
+              
+            <nav class="blog-pagination" aria-label="Pagination">
+              <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+              <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+            </nav>
+      
+          </div>
+      
+          <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+              <div class="p-4 mb-3 bg-body-tertiary rounded">
+                <h4 class="fst-italic">About</h4>
+                <p class="mb-0">LPMI BDS merupakan lembaga pendidikan mental yang di dirikan pada tahun 2013 yang hingga kini masih beroprasi di sekitaran jawa barat, kami telah membuka cabang di berbagai daerah diantara lainnya JABODETABEK, Bandung, Garut, Ciamis, Tasikmalaya, dan Priyangan Timur. Di dampingi dengan Instruktur yang sudah berlisensi dan sudah mendapat bimbingan sebelumnya. </p>
+              </div>
+     <!-- FOOTER -->
+     <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-body-secondary">&copy; 2024 Company, Inc</p>
+                  
+            <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+            </a>
+                  
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link px-2 text-body-secondary">About</a></li>
+                <li class="nav-item"><a href="Blog.html" class="nav-link px-2 text-body-secondary">Blog</a></li>
+                <li class="nav-item"><a href="galery.html" class="nav-link px-2 text-body-secondary">Galery</a></li>
+            </ul>
+         </footer>
+    </div>            
+            </main>
+            <script src="js/bootstrap.bundle.js"></script>
+      
+    
+</body>
+</html>
